@@ -1,0 +1,137 @@
+========================================================================
+ MiniLang Lexical Analyzer  (Flex / win_flex version)
+========================================================================
+Source file: input.txt
+------------------------------------------------------------------------
+
+  #  TOKEN TYPE               LEXEME           VALUE            LINE:COL
+------------------------------------------------------------------------
+  1  LET_KEYWORD              let                                   5:1
+  2  IDENTIFIER               x                x                    5:5
+  3  ASSIGN_OPERATOR          =                                     5:7
+  4  NUMBER_LITERAL           10               10                   5:9
+  5  SEMICOLON                ;                                     5:11
+  6  LET_KEYWORD              Let                                   6:1
+  7  IDENTIFIER               y                y                    6:5
+  8  ASSIGN_OPERATOR          =                                     6:7
+  9  NUMBER_LITERAL           3.14             3.14                 6:9
+ 10  SEMICOLON                ;                                     6:13
+ 11  LET_KEYWORD              let                                   7:1
+ 12  IDENTIFIER               name             name                 7:5
+ 13  ASSIGN_OPERATOR          =                                     7:10
+ 14  STRING_LITERAL           "Shahzaib"       Shahzaib             7:12
+ 15  SEMICOLON                ;                                     7:22
+ 16  LET_KEYWORD              let                                   8:1
+ 17  IDENTIFIER               msg              msg                  8:5
+ 18  ASSIGN_OPERATOR          =                                     8:9
+ 19  STRING_LITERAL           "Hello\tWorld\n" Hello\tWorld\n       8:11
+ 20  SEMICOLON                ;                                     8:27
+ 21  LET_KEYWORD              let                                  11:1
+ 22  IDENTIFIER               sum              sum                 11:5
+ 23  ASSIGN_OPERATOR          =                                    11:9
+ 24  IDENTIFIER               x                x                   11:11
+ 25  PLUS_OPERATOR            +                                    11:13
+ 26  IDENTIFIER               y                y                   11:15
+ 27  STAR_OPERATOR            *                                    11:17
+ 28  NUMBER_LITERAL           2                2                   11:19
+ 29  MINUS_OPERATOR           -                                    11:21
+ 30  NUMBER_LITERAL           4                4                   11:23
+ 31  SLASH_OPERATOR           /                                    11:25
+ 32  NUMBER_LITERAL           2                2                   11:27
+ 33  PERCENT_OPERATOR         %                                    11:29
+ 34  NUMBER_LITERAL           3                3                   11:31
+ 35  SEMICOLON                ;                                    11:32
+ 36  IF_KEYWORD               if                                   14:1
+ 37  LEFT_PAREN               (                                    14:4
+ 38  IDENTIFIER               x                x                   14:5
+ 39  GREATER_THAN_OR_EQUAL    >=                                   14:7
+ 40  NUMBER_LITERAL           5                5                   14:10
+ 41  RIGHT_PAREN              )                                    14:11
+ 42  LEFT_BRACE               {                                    14:13
+ 43  PRINT_KEYWORD            print                                15:5
+ 44  LEFT_PAREN               (                                    15:10
+ 45  IDENTIFIER               sum              sum                 15:11
+ 46  RIGHT_PAREN              )                                    15:14
+ 47  SEMICOLON                ;                                    15:15
+ 48  RIGHT_BRACE              }                                    16:1
+ 49  ELSE_KEYWORD             else                                 16:3
+ 50  LEFT_BRACE               {                                    16:8
+ 51  PRINT_KEYWORD            print                                17:5
+ 52  LEFT_PAREN               (                                    17:10
+ 53  STRING_LITERAL           "x is small"     x is small          17:11
+ 54  RIGHT_PAREN              )                                    17:23
+ 55  SEMICOLON                ;                                    17:24
+ 56  RIGHT_BRACE              }                                    18:1
+ 57  IF_KEYWORD               if                                   20:1
+ 58  LEFT_PAREN               (                                    20:4
+ 59  IDENTIFIER               x                x                   20:5
+ 60  EQUAL_EQUAL              ==                                   20:7
+ 61  IDENTIFIER               y                y                   20:10
+ 62  RIGHT_PAREN              )                                    20:11
+ 63  LEFT_BRACE               {                                    20:13
+ 64  PRINT_KEYWORD            print                                20:15
+ 65  LEFT_PAREN               (                                    20:20
+ 66  IDENTIFIER               x                x                   20:21
+ 67  RIGHT_PAREN              )                                    20:22
+ 68  SEMICOLON                ;                                    20:23
+ 69  RIGHT_BRACE              }                                    20:25
+ 70  IF_KEYWORD               if                                   21:1
+ 71  LEFT_PAREN               (                                    21:4
+ 72  IDENTIFIER               x                x                   21:5
+ 73  NOT_EQUAL                !=                                   21:7
+ 74  IDENTIFIER               y                y                   21:10
+ 75  RIGHT_PAREN              )                                    21:11
+ 76  LEFT_BRACE               {                                    21:13
+ 77  PRINT_KEYWORD            print                                21:15
+ 78  LEFT_PAREN               (                                    21:20
+ 79  IDENTIFIER               y                y                   21:21
+ 80  RIGHT_PAREN              )                                    21:22
+ 81  SEMICOLON                ;                                    21:23
+ 82  RIGHT_BRACE              }                                    21:25
+ 83  IF_KEYWORD               if                                   22:1
+ 84  LEFT_PAREN               (                                    22:4
+ 85  IDENTIFIER               x                x                   22:5
+ 86  LESS_THAN_OR_EQUAL       <=                                   22:7
+ 87  NUMBER_LITERAL           100              100                 22:10
+ 88  COMMA                    ,                                    22:13
+ 89  IDENTIFIER               y                y                   22:15
+ 90  LESS_THAN                <                                    22:17
+ 91  NUMBER_LITERAL           50               50                  22:19
+ 92  COMMA                    ,                                    22:21
+ 93  IDENTIFIER               x                x                   22:23
+ 94  GREATER_THAN             >                                    22:25
+ 95  NUMBER_LITERAL           1                1                   22:27
+ 96  RIGHT_PAREN              )                                    22:28
+ 97  LEFT_BRACE               {                                    22:30
+ 98  PRINT_KEYWORD            print                                22:32
+ 99  LEFT_PAREN               (                                    22:37
+100  IDENTIFIER               name             name                22:38
+101  RIGHT_PAREN              )                                    22:42
+102  SEMICOLON                ;                                    22:43
+103  RIGHT_BRACE              }                                    22:45
+104  LET_KEYWORD              let                                  25:1
+105  IDENTIFIER               bad1             bad1                25:5
+106  ASSIGN_OPERATOR          =                                    25:10
+  Lexical error [line 25, col 12]: Invalid number literal '12abc'
+107  SEMICOLON                ;                                    25:17
+108  LET_KEYWORD              let                                  26:1
+109  IDENTIFIER               bad2             bad2                26:5
+110  ASSIGN_OPERATOR          =                                    26:10
+  Lexical error [line 26, col 12]: Malformed number literal: digit expected after '.'
+111  SEMICOLON                ;                                    26:14
+112  LET_KEYWORD              let                                  27:1
+113  IDENTIFIER               bad3             bad3                27:5
+114  ASSIGN_OPERATOR          =                                    27:10
+  Lexical error [line 27, col 12]: Unexpected character '@'
+115  SEMICOLON                ;                                    27:13
+116  LET_KEYWORD              let                                  28:1
+117  IDENTIFIER               bad4             bad4                28:5
+118  ASSIGN_OPERATOR          =                                    28:10
+  Lexical error [line 28, col 12]: Unexpected character '!' (did you mean '!=' ?)
+119  IDENTIFIER               x                x                   28:13
+120  SEMICOLON                ;                                    28:14
+121  EOF                      <eof>                                29:1
+
+Total tokens (including EOF): 121
+
+4 lexical error(s) found.

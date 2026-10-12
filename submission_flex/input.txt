@@ -1,0 +1,28 @@
+// MiniLang sample program for the FLEX lexer
+
+/* Variable declarations
+   (this block comment spans multiple lines) */
+let x = 10;
+Let y = 3.14;
+let name = "Shahzaib";
+let msg = "Hello\tWorld\n";
+
+// Arithmetic
+let sum = x + y * 2 - 4 / 2 % 3;
+
+// Conditions with comparison operators
+if (x >= 5) {
+    print(sum);
+} else {
+    print("x is small");
+}
+
+if (x == y) { print(x); }
+if (x != y) { print(y); }
+if (x <= 100, y < 50, x > 1) { print(name); }
+
+// Lexical errors (to show error handling)
+let bad1 = 12abc;
+let bad2 = 5.;
+let bad3 = @;
+let bad4 = !x;
