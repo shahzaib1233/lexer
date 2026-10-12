@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Flex generated files
+lex.yy.c
+
+# Compiled executables
+*.exe
+*.out
+*.o
